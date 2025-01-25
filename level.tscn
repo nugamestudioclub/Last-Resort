@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dml5b1w842pp"]
+[gd_scene load_steps=6 format=3 uid="uid://dml5b1w842pp"]
 
 [ext_resource type="PackedScene" uid="uid://bxxi775lkhr6x" path="res://player.tscn" id="1_lu7lw"]
 [ext_resource type="Script" path="res://player-movement.gd" id="2_7qc0n"]
@@ -7,15 +7,28 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_alfar"]
 size = Vector2(125, 125)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2u2ny"]
+size = Vector2(68, 1076)
+
 [node name="Level" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_lu7lw")]
-position = Vector2(554, 307)
+position = Vector2(-3, -13)
 script = ExtResource("2_7qc0n")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
+rotation = 1.5708
 texture = ExtResource("2_kapir")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_alfar")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-985, -533)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(24, 528)
+shape = SubResource("RectangleShape2D_2u2ny")
+
+[node name="Camera2D" type="Camera2D" parent="."]
