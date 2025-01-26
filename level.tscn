@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bxxi775lkhr6x" path="res://player.tscn" id="1_lu7lw"]
 [ext_resource type="Script" path="res://player-movement.gd" id="2_7qc0n"]
-[ext_resource type="Texture2D" uid="uid://b02hls1woxiyb" path="res://icon.svg" id="2_kapir"]
+[ext_resource type="Texture2D" uid="uid://cpvmvawmyw28e" path="res://icon-look-at.jpeg" id="3_3l32p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_alfar"]
 size = Vector2(125, 125)
@@ -17,8 +17,7 @@ position = Vector2(-3, -13)
 script = ExtResource("2_7qc0n")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-rotation = 1.5708
-texture = ExtResource("2_kapir")
+texture = ExtResource("3_3l32p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-0.5, 0.5)

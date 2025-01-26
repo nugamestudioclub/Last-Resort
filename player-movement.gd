@@ -19,3 +19,5 @@ func _physics_process(delta: float) -> void:
 # camera movement
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
+	#var camera_dir = Input.get_vector("look_left","look_right","look_up","look_down")
+	#look_at(camera_dir)
