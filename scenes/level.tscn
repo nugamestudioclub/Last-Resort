@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dml5b1w842pp"]
+
+[ext_resource type="PackedScene" uid="uid://bxxi775lkhr6x" path="res://scenes/player.tscn" id="1_lu7lw"]
+[ext_resource type="PackedScene" uid="uid://33hhqgyao0fn" path="res://scenes/glowing_text.tscn" id="2_nh1r1"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("1_lu7lw")]
+
+[node name="GlowingText" parent="." instance=ExtResource("2_nh1r1")]
+position = Vector2(410, -138)
+
+[node name="GlowingText2" parent="." instance=ExtResource("2_nh1r1")]
+z_index = -1
+position = Vector2(-277, -144)
+english_text = "3rd floor"

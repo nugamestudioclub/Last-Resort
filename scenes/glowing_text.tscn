@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://33hhqgyao0fn"]
+
+[ext_resource type="FontFile" uid="uid://b1wabc3ih6w4t" path="res://fonts/MongolianScript.ttf" id="1_11f21"]
+[ext_resource type="Script" path="res://scripts/glowing_text.gd" id="1_fgiqn"]
+[ext_resource type="Script" path="res://scripts/text-effects/mongol_text.gd" id="2_baxwb"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_o2i2e"]
+script = ExtResource("2_baxwb")
+
+[node name="GlowingText" type="Node2D"]
+script = ExtResource("1_fgiqn")
+
+[node name="EnglishText" type="RichTextLabel" parent="."]
+offset_left = 11.0
+offset_top = -95.0
+offset_right = 278.0
+offset_bottom = 77.0
+theme_override_font_sizes/normal_font_size = 60
+text = "1st floor"
+
+[node name="MongolianText" type="RichTextLabel" parent="."]
+offset_left = -191.0
+offset_top = -99.0
+offset_right = 15.0
+offset_bottom = 90.0
+rotation = 1.5708
+scale = Vector2(1, -1)
+theme_override_fonts/normal_font = ExtResource("1_11f21")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[mongol_text]᠑ ᠳ ᠳᠠᠪᠬᠤᠷ"
+custom_effects = [SubResource("RichTextEffect_o2i2e")]
